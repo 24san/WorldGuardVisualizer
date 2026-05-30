@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "wg_region_visualizer",
+  "version": "${version}",
+  "name": "WG Region Visualizer",
+  "description": "Client-side WorldGuard region outline renderer for Paper plugin messages.",
+  "authors": [
+    "24san"
+  ],
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "org.san24.wgregionvisualizer.client.WGRegionVisualizerClient"
+    ]
+  },
+  "mixins": [
+    "wg_region_visualizer.client.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "java": ">=21"
+  }
+}

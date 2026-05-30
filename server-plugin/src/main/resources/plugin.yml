@@ -1,0 +1,21 @@
+name: WGRegionVisualizerBridge
+version: 1.0.0
+main: org.san24.wgregionvisualizer.bridge.WGRegionVisualizerBridgePlugin
+api-version: '1.21'
+authors:
+  - 24san
+depend:
+  - WorldGuard
+  - WorldEdit
+commands:
+  wgviz:
+    description: Send WorldGuard region outlines to the WG Region Visualizer client mod.
+    usage: /wgviz <show|all|hide|list|reload>
+    permission: wgviz.use
+permissions:
+  wgviz.use:
+    description: Allows use of WG Region Visualizer commands.
+    default: op
+  wgviz.reload:
+    description: Allows reloading WG Region Visualizer Bridge config.
+    default: op

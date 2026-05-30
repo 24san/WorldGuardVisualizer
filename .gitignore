@@ -1,0 +1,22 @@
+# Gradle
+.gradle/
+build/
+out/
+
+# Loom
+run/
+
+# IntelliJ
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated jars
+*.jar
+!gradle/wrapper/gradle-wrapper.jar

@@ -1,0 +1,36 @@
+plugins {
+    id 'base'
+}
+
+allprojects {
+    repositories {
+        maven {
+            name = 'PaperMC'
+            url = 'https://repo.papermc.io/repository/maven-public/'
+        }
+        maven {
+            name = 'EngineHub'
+            url = 'https://maven.enginehub.org/repo/'
+        }
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        mavenCentral()
+    }
+}
+
+tasks.register('copyBuiltJars', Copy) {
+    dependsOn ':server-plugin:shadowJar', ':fabric-client:remapJar'
+    from(project(':server-plugin').tasks.named('shadowJar').flatMap { it.archiveFile }) {
+        rename { 'WGRegionVisualizerBridge.jar' }
+    }
+    from(project(':fabric-client').tasks.named('remapJar').flatMap { it.archiveFile }) {
+        rename { 'wg-region-visualizer.jar' }
+    }
+    into layout.buildDirectory.dir('libs')
+}
+
+tasks.named('build') {
+    dependsOn 'copyBuiltJars'
+}

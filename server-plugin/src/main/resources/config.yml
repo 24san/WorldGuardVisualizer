@@ -1,0 +1,5 @@
+# Maximum number of regions sent by /wgviz all.
+max-regions-all: 200
+
+# Maximum UTF-8 bytes per plugin message. Minecraft plugin messages should stay below 32766 bytes.
+max-payload-bytes: 30000

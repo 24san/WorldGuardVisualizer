@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "worldguardvisualizer",
+  "version": "${version}",
+  "name": "WorldGuardVisualizer",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/worldguardvisualizer/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "org._24san.worldguardvisualizer.client.WorldguardvisualizerClient"
+    ],
+    "main": [
+      "org._24san.worldguardvisualizer.Worldguardvisualizer"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
